@@ -93,5 +93,6 @@ DOWNLOAD_DELAY = 3
 LOG_LEVEL = 'INFO'
 
 ITEM_PIPELINES = {
-    'career.pipelines.CareerCsvWriterPipeline': 1,
+    'career.pipelines.CareerSpreadWriterPipeline':1,
+    'career.pipelines.CareerCsvWriterPipeline': 2,
 }
