@@ -61,15 +61,15 @@ class MidworksSpider(scrapy.Spider):
                         if job_content_box is not None:
                             job_content = job_content_box.text
                         
-                yield CareerItem(
-                    job_title = job_title,
-                    fee = fee,
-                    nearest_station = nearest_station,
-                    contract = contract,
-                    language = language,
-                    skill = skill,
-                    job_content = job_content 
-                )
+            yield CareerItem(
+                job_title = job_title,
+                fee = fee,
+                nearest_station = nearest_station,
+                contract = contract,
+                language = language,
+                skill = skill,
+                job_content = job_content 
+            )
 
         # 再帰的にページを辿る
         next_page_block = soup.find('a',class_='page-link',rel='next')
